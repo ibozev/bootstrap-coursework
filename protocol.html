@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap-4.4.1-dist/css/bootstrap.css" rel="stylesheet">
+		<!-- <!-- <!-- Custom CSS -->  
+		<link href="css/styles.css" rel="stylesheet">
+		
+		<title>SCP Начало</title>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary"	>
+			<a class="navbar-brand" href="index.html">SCP</a>	
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Начало</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="protocol.html">Протоколът SCP</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="program.html">Програмата SCP</a>
+					</li>					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сравнение</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="scp_sftp.html">SCP vs SFTP</a>
+							<a class="dropdown-item" href="scp_cp.html">SCP vs CP</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="how_to_use.html">Как се използва?</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="examples.html">Примери</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacts.html">Контакти</a>
+					</li>
+
+				</ul>
+			</div>
+		</nav>
+		
+		<!-- Content -->
+		<br/>		
+		<main role="main" class="container">
+		  <div class="jumbotron ">
+			<h1 align="center">Протоколът SCP</h1>
+			<hr class="hr-thick">
+			<img src="images/scp_ssh.jpg" class="img-fluid mx-auto d-block" alt="Responsive image"  align="left" width="600">
+			<p class="lead">SCP протоколът е мрежов протокол, базиран на <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a> протокола <a href="https://en.wikipedia.org/wiki/Berkeley_r-commands">RCP</a> протокола, който позволява трансфер на файлове между отделни машини в мрежата. SCP използва <a href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a> за трансфер на данни и за верификация, като по този начин се гарантира истинността и поверителността на информацията при транзит. Клиентът може да качва файлове на сървъра, като ако желае, може да включи и някои от основните му атрибути. Също така е възможно и свалянето на файлове или директории от сървъра. Обикновено SCP работи на <a href="https://en.wikipedia.org/wiki/Port_(computer_networking)">TCP порт</a> 22.</p>
+			<hr class="hr-thick">
+			<div id="how_it_works">
+				<h1 align="center">Как работи?</h1></br>
+				<img src="images/scp_servers.jpg" class="img-fluid mx-auto d-block" alt="Responsive image"  align="center" width="700"></br>
+				<p class="lead">Клиентът стартира SSH връзка на отдалечения (remote) хост и изисква SCP процесът да бъде стартиран на отдалечения сървър. Този процес има два режима на работа:</p>
+				<ul style="margin: 1em">
+					<li>Сорс (source) режим, който чете файлове от диска и ги изпраща на клиента.</li>
+					<li>Синк (sink) режим, който приема файловете, изпратени от клиента, и ги записва.</li>
+				</ul>
+				<p class="lead">Сорс режимът се задейства чрез флаг -f (from), а синк режимът – с -t (to). Тези флагове обаче се извикват вътрешно и не е нужно да се пишат ръчно, затова и не са документирани в <a href="https://linux.die.net/man/1/scp">man</a> документацията. </p></br>
+				<img src="images/transfer1.gif" class="img-fluid mx-auto d-block" alt="Responsive image"  align="center" width="700"></br>
+				<p class="lead" style="text-indent: 0">А ето и какво реално се случва, когато копираме файл:<p></br>
+				<img src="images/transfer2.gif" class="img-fluid mx-auto d-block" alt="Responsive image"  align="center" width="700"></br>				
+				<hr><h3 align="center">Режимът remote to remote</h1></br>
+				<img src="images/transfer3.jpg" class="img-fluid mx-auto d-block" alt="Responsive image"  align="center" width="700"></br>				
+				<p class="lead">Често задаван въпрос е „Защо remote-to-remote режимът не работи с въведена парола или оторизация през клавиатурата?“. Това всъщност не е бъг, а свойство. Всъщност би могло, паролата да се въведе някъде в кода, но това не е добра практика, все пак не бихме искали <a href="https://en.wikipedia.org/wiki/Server_(computing)">хост</a> A да разбере паролата на <a href="https://en.wikipedia.org/wiki/Server_(computing)">хост</a> Б. Решението на „проблема“ е използването на двойка ключове за достъп. </p>
+				<p class="lead">Ето и кратък откъс от <a href="https://linux.die.net/man/1/scp">man</a> страницата на SCP:</p></br>
+				<img src="images/man_page.png" class="img-fluid mx-auto d-block" alt="Responsive image"  align="center" width="700">
+			</div>
+		  </div>		  
+		</main>
+			
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>

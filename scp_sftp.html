@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap-4.4.1-dist/css/bootstrap.css" rel="stylesheet">
+		<!-- <!-- <!-- Custom CSS -->  
+		<link href="css/styles.css" rel="stylesheet">
+		
+		<title>SCP Начало</title>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary"	>
+			<a class="navbar-brand" href="index.html">SCP</a>	
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Начало</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="protocol.html">Протоколът SCP</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="program.html">Програмата SCP</a>
+					</li>					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сравнение</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="scp_sftp.html">SCP vs SFTP</a>
+							<a class="dropdown-item" href="scp_cp.html">SCP vs CP</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="how_to_use.html">Как се използва?</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="examples.html">Примери</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacts.html">Контакти</a>
+					</li>
+
+				</ul>
+			</div>
+		</nav>
+		
+		<!-- Content -->
+		<br/>		
+		<main role="main" class="container">
+		  <div class="jumbotron ">
+			<img src="images/scp_vs_sftp.png" class="img-fluid mx-auto d-block" alt="Responsive image"  align="center" width="700"></br>
+			<p class="lead">На кратко основната разлика между двата протокола е, че SCP се използва единствено за трансфер на файлове и всеки от тях трябва да бъде упоменат в командния ред. SFTP е по-сложно устроен и позволява изпълняването на интерактивни команди, като създаването на директории, изтриването на директории и файлове и др.</p></br>
+			<hr class="hr-thick">
+			<h3 align="center">Tаблица с някои от най-съществените разлики:</h3></br>
+			<table class="table table-bordered">
+				<tr>
+					<th scope="col" style="text-align: center; font-size: 20px">SCP</th>
+					<th scope="col" style="text-align: center; font-size: 20px">SFTP</th>
+				</tr>
+				<tr>
+					<td>Мрежов протокол, който позволява трансферирането на компютърни файлове между локален хост и отдалечен хост или между два отдалечени хоста.</td>
+					<td>Мрежов протокол, който позволява достъп до файлове, пренос на файлове и обработка на файлове през всеки един надежден поток от данни.</td>
+				</tr>
+				<tr>
+					<td>Абревиатурата идва от Secure Copy Protocol.</td>
+					<td>Абревиатурата идва от Secure File Transfer Protocol.</td>
+				</tr>
+				<tr>
+					<td>SCP клиентът от командния ред не позволява връщането към вече прекъснат трансфер.</td>
+					<td>SFTP клиентът от командния ред позволява връщането към вече прекъснат трансфер чрез опцията -а на командата get.</td>
+				</tr>
+				<tr>
+					<td>По-бърз е от SFTP.</td>
+					<td>По-бавен от SCP.</td>
+				</tr>
+			</table>
+		  </div>		  
+		</main>
+			
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>

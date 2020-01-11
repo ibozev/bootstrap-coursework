@@ -1,0 +1,26 @@
+.content {
+    background-color: #f1f1f1;
+    padding: 25px;
+	border-radius: 6px;
+}
+
+.hr-thick{
+	border-color: #000;
+}
+
+.nav-item{
+	font-size: 20px;
+}
+
+.navbar-brand{
+	font-size: 25px;
+}
+
+.table-bordered th, .table-bordered tr, .table-bordered td{
+	border: 1px solid black;
+}
+
+p{
+	text-indent: 40px;
+	margin: 0
+}

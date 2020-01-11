@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap-4.4.1-dist/css/bootstrap.css" rel="stylesheet">
+		<!-- <!-- <!-- Custom CSS -->  
+		<link href="css/styles.css" rel="stylesheet">
+		
+		<title>SCP Начало</title>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary"	>
+			<a class="navbar-brand" href="index.html">SCP</a>
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Начало</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="protocol.html">Протоколът SCP</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="program.html">Програмата SCP</a>
+					</li>					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сравнение</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="scp_sftp.html">SCP vs SFTP</a>
+							<a class="dropdown-item" href="scp_cp.html">SCP vs CP</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="how_to_use.html">Как се използва?</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="examples.html">Примери</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacts.html">Контакти</a>
+					</li>
+
+				</ul>
+			</div>
+		</nav>
+		
+		<!-- Content -->
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<h1 class="display-4" align="center">SCP (Secure Copy Protocol)</h1></br>
+				<img src="images/scp.png" class="img-fluid mx-auto d-block" alt="Responsive image"  width="500"></br>
+				<p class="lead">Протокол за сигурен трансфер на компютърни файлове между две машини, чрез протокола  <a href="https://en.wikipedia.org/wiki/Secure_Shell"> SSH (Secure Shell)</a>. Обмяната на файлове е възможна както между локален (local) <a href="https://en.wikipedia.org/wiki/Server_(computing)"> хост </a> и отдалечен (remote) <a href="https://en.wikipedia.org/wiki/Server_(computing)"> хост </a>, така и между два отдалечени <a href="https://en.wikipedia.org/wiki/Server_(computing)"> хостa </a>. SCP се свързва не само с протокола, но и с програмата, която носи същото име.</p>
+				<p class="lead">SCP е сравнително стар протокол, но все още се поддържа на почти всички <a href="https://en.wikipedia.org/wiki/Unix"> Unix </a> -базирани системи, като част от SSH пакета.</p>
+				<p class="lead">През април 2019 <a href="https://en.wikipedia.org/wiki/OpenSSH"> OpenSSH </a> програмистите обявяват, че SCP протоколът е остарял и не е достатъчно гъвкав за нуждите им, затова много хора препоръчват използването на модерни протоколи като <a href="https://en.wikipedia.org/wiki/Secure_file_transfer_program"> SFTP </a> и <a href="https://en.wikipedia.org/wiki/Rsync"> RSYNC </a>.</p>
+				<p class="lead">Въпреки това обаче SCP е основна команда, която е за предпочитане от хора, които прекарват голяма част от работното си време с <a href="https://en.wikipedia.org/wiki/Secure_Shell"> SSH </a> протокола и за тях по-важен е бързият трансфер на файлове, а не толкова управлението на отдалечения хост.</p>
+			</div>
+		</div>
+
+		<div class="container" style="align: center; color: #007bff" >
+			<p class="h2">Карта на сайта</p>
+			<ul class="list-style">
+				<li><a href="index.html">Начало</a></li>
+				<li><a href="protocol.html">Протоколът SCP</a></li>
+				<ul>
+					<li><a href="protocol.html#how_it_works">Как работи?</a></li>
+				</ul>
+				<li><a href="program.html">Програматa SCP</a></li>
+				<ul>
+					<li><a href="syntax.html">Синтаксис</a></li>
+					<ul>
+						<li><a href="syntax.html#options">Опции</a></li>
+					</ul>
+				</ul>
+				<li>Съдържание</li>
+				<ul>
+					<li><a href="scp_sftp.html">SCP vs SFTP</a></li>
+					<li><a href="scp_cp.html">SCP vs CP</a></li>
+				</ul>
+				<li><a href="how_to_use.html">Как се използва?</a></li>
+				<li><a href="examples.html">Примери</a></li>
+				<li><a href="contacts.html">Контакти</a></li>
+			</ul> 
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>
